@@ -18,7 +18,7 @@ public class StrToInt {
 			int curC = str.charAt(i) - '0';
 			if(curC > 9 || curC < 0)
 				return 0;
-			number = number * 10 + curC;//(number << 1) + (number << 3) + (str[i] & 0xf);
+			number = number * 10 + curC;//(number << 1) + (number << 3) + (str[i] & 0xf); //后者效率更优
 		}
 		return number * isNegative;
     }
